@@ -13,11 +13,11 @@
   </head>
 
   <body>
-    <div class="main-navbar border-bottom d-flex justify-content-between pt-2 px-3">
-      <p>Simple Airbnb</p>
-      <p><%= link_to "Add flat", new_flat_path %></p>
+    <div class="main-navbar d-flex justify-content-between pt-3 px-3">
+      <p><%= link_to "Simple Airbnb", flats_path %></p>
+      <p class="btn-flat"><%= link_to "Add flat", new_flat_path %></p>
     </div>
-    <div class="container">
+    <div class="container mt-3">
       <%= yield %>
     </div>
   </body>

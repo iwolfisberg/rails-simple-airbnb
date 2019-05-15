@@ -1,19 +1,23 @@
 <h1>All our Flats (<%= @flats.size %>)</h1>
 
-<div class="flat-cards d-flex">
+<div class="flat-cards row">
   <% @flats.each do |flat| %>
     <div class="flat-card">
-      <h2><%= flat.name %></h2>
-      <p><%= flat.address %></p>
-      <div class="flat-card-info">
-        <i class="fas fa-users"> <%= flat.number_of_guests %></i>
-        <i class="fas fa-euro-sign ml-2"> <%= flat.price_per_night %></i>
+      <div class="flat-card-main">
+        <h2><%= flat.name %></h2>
+        <p><%= flat.address %></p>
+        <div class="flat-card-main-info">
+          <i class="fas fa-users"> <%= flat.number_of_guests %></i>
+          <i class="fas fa-euro-sign ml-2"> <%= flat.price_per_night %></i>
+        </div>
       </div>
-      <p class="border-top"><%= link_to "Show more", flat_path(flat) %></p>
-      <p><%= link_to "Edit", edit_flat_path(flat) %></p>
-      <p><%= link_to "Delete", flat_path(flat),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %></p>
+      <div class="flat-card-links d-flex justify-content-between align-items-baseline border-top">
+        <p id="link-show" class="pt-3"><%= link_to "Show more", flat_path(flat) %></p>
+        <p id="link-edit" class="pt-3"><%= link_to "Edit", edit_flat_path(flat) %></p>
+        <p id="link-delete" class="pt-3"><%= link_to "Delete", flat_path(flat),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %></p>
+      </div>
     </div>
   <% end %>
 </div>

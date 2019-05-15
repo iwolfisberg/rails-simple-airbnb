@@ -1,9 +1,17 @@
-<h1><%= @flat.name %></h1>
-<p><%= @flat.address %></p>
-<h3>A bit more about this flat...</h3>
-<p><%= @flat.description %></p>
-<h3>Details</h3>
-<div class="flat-card-info">
-  <i class="fas fa-users"> <%= @flat.number_of_guests %></i>
-  <i class="fas fa-euro-sign ml-2"> <%= @flat.price_per_night %></i>
+<div class="flat-cards-content row">
+  <div class="flat-card-content flat-card-main">
+  <h1><%= @flat.name %></h1>
+  <p><%= @flat.address %></p>
+</div>
+<div class="flat-card-content flat-card-main">
+  <h3>A bit more about this flat...</h3>
+  <p><%= @flat.description %></p>
+</div>
+<div class="flat-card-content flat-card-main">
+  <h3>Details</h3>
+  <div class="flat-card-main-info">
+    <i class="fas fa-users"> <%= @flat.number_of_guests %></i>
+    <i class="fas fa-euro-sign ml-2"> <%= @flat.price_per_night %></i>
+  </div>
+</div>
 </div>
