@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 5.times do
-  Flat.create([
+  Flat.create!([
     {
       name: Faker::Lorem.sentence,
       address: Faker::Address.street_address,
